@@ -1,7 +1,11 @@
+
+
 .logo {
   font-size: 35px;
   font-family: 'Roboto Slab', serif;
   margin-top:20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
   width:170px;
   height:130px;
   border-radius:13px;
@@ -14,25 +18,14 @@
   font-family: 'Lato', sans-serif;
   margin-bottom:110px;
 }
-.margin{
-  margin-top:40px;
+body{
+  margin-top:50px;
   margin-right: 30px;
   margin-left:30px;
   margin-bottom:50px;
   
   }
-.tlo1 {
-  background:#F8FDA7;
-  border-color:#F60000;
-  border-width:3px;
-  border-style:solid;
-  border-radius:5px;
-}
 
-
-.tlo {
-background-color:green;
-}
 .test-picture {
   background:#eee ;
   display: flex;
@@ -78,75 +71,7 @@ background-color:green;
   opacity: 1;
   transform: scale(1.1);
 }
-.site-nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 10px;
-  box-sizing: border-box;
-  height: 40px;
-  width: 100%;
-  background: ;
-}
 
-.side-menu-trigger {
-  border: 30;
-  border-radius: 15px;
-  background: #ffffff;
-  margin-bottom:15px;
-  
-}
-
-.side-menu {
-  display: flex;
-  box-sizing: border-box;
-  position: absolute;
-  height: 100%;
-  width: 300px;
-  top: 20px;
-  right: -300px;
-  padding: 0;
-  background: #34b399;
-  transition: 0.3s transform ease-in-out;
-}
-
-.side-menu ul {
-  position: absolute;
-  display: flex;
-  height: calc(100% - 20px);
-  flex-wrap: wrap;
-  margin: 0 10px;
-  padding: 0;
-  list-style-type: none;
-  align-content: flex-start
-}
-
-.side-menu ul li {
-  display: flex;
-  height: 30px;
-  background: #ffffff;
-  flex-basis: 100%;
-  margin-top: 20px;
-  color: #696e9e;
-  border-radius: 5px;
-  overflow: hidden;
-  
-}
-
-.side-menu ul li a {
-  display: flex;
-  padding: 10px;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background: #ffffff;
-  text-decoration: none;
-  box-sizing: border-box;
-}
-
-.side-menu-trigger:focus ~ .side-menu, .side-menu:hover {
-  transform: translateX(-300px); 
-}
 .test-photo{
   background: #eee;
   display: flex;
@@ -206,3 +131,61 @@ background-color:green;
   font-size: 20px;
   
 }
+
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.7);
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+nav{
+  position: relative;
+  left: 350px;
+}
+h1{
+  text-align: center;
+}
+
